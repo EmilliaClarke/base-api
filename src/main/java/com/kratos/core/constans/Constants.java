@@ -1,4 +1,4 @@
-package com.akami.core.constans;
+package com.kratos.core.constans;
 
 import lombok.experimental.UtilityClass;
 

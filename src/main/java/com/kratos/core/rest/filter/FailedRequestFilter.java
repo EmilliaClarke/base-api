@@ -1,4 +1,4 @@
-package com.akami.core.rest.filter;
+package com.kratos.core.rest.filter;
 
 import io.restassured.filter.Filter;
 import io.restassured.filter.FilterContext;

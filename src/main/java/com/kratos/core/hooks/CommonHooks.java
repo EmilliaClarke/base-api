@@ -1,4 +1,4 @@
-package com.akami.core.hooks;
+package com.kratos.core.hooks;
 
 import io.cucumber.java.After;
 import org.junit.Before;

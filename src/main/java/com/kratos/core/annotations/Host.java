@@ -1,4 +1,4 @@
-package com.akami.core.annotations;
+package com.kratos.core.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

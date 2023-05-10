@@ -1,11 +1,12 @@
-package com.akami.core.rest.request;
+package com.kratos.core.rest.request;
 
 
-import com.akami.core.configuration.ConfigurationHelper;
-import com.akami.core.helpers.Context;
+import com.kratos.core.configuration.ConfigurationHelper;
+import com.kratos.core.helpers.Context;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.akami.core.rest.filter.FailedRequestFilter;
+import com.kratos.core.rest.filter.FailedRequestFilter;
+import com.kratos.core.constans.Constants;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.http.Header;
@@ -18,8 +19,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.PropertySource;
 
 import java.util.Map;
-
-import static com.akami.core.constans.Constants.X_AUTH;
 
 
 @Slf4j
@@ -99,7 +98,7 @@ public abstract class BaseAPIRequest {
     protected Response getRequest(final String uri, final int statusCode, String token) {
         return given()
                 .when()
-                .header(X_AUTH, token)
+                .header(Constants.X_AUTH, token)
                 .get(uri)
                 .then().statusCode(statusCode)
                 .extract().response();
@@ -118,7 +117,7 @@ public abstract class BaseAPIRequest {
                 .contentType(ContentType.JSON)
                 .body(from(rawBody))
                 .when()
-                .header(X_AUTH, token)
+                .header(Constants.X_AUTH, token)
                 .post(uri)
                 .then().statusCode(statusCode)
                 .extract().response();
@@ -129,7 +128,7 @@ public abstract class BaseAPIRequest {
                 .contentType(ContentType.JSON)
                 .body(from(rawBody))
                 .when()
-                .header(X_AUTH, token)
+                .header(Constants.X_AUTH, token)
                 .put(uri)
                 .then().statusCode(statusCode)
                 .extract().response();
@@ -138,7 +137,7 @@ public abstract class BaseAPIRequest {
     protected Response deleteRequest(final String uri, String token) {
         return given()
                 .when()
-                .header(X_AUTH, token)
+                .header(Constants.X_AUTH, token)
                 .delete(uri)
                 .then()
                 .extract().response();
@@ -183,7 +182,7 @@ public abstract class BaseAPIRequest {
     }
 
     protected void setAuthHeader(String headerValue) {
-        Header header = new Header(X_AUTH, headerValue);
+        Header header = new Header(Constants.X_AUTH, headerValue);
         given().header(header);
     }
 }

@@ -1,4 +1,4 @@
-package com.akami.core.configuration;
+package com.kratos.core.configuration;
 
 
 import org.apache.commons.configuration2.CompositeConfiguration;

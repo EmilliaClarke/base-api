@@ -1,6 +1,6 @@
-package com.akami.core.helpers;
+package com.kratos.core.helpers;
 
-import com.akami.core.exception.ExceptionError;
+import com.kratos.core.exception.ExceptionError;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

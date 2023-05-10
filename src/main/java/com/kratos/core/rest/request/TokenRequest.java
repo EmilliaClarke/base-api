@@ -1,4 +1,4 @@
-package com.akami.core.rest.request;
+package com.kratos.core.rest.request;
 
 
 public class TokenRequest extends BaseAPIRequest {

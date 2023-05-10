@@ -1,4 +1,4 @@
-package com.akami.core.configuration;
+package com.kratos.core.configuration;
 
 /**
  * This class is aimed to store different properties.

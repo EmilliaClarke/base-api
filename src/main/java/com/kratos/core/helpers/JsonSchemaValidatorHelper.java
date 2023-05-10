@@ -1,6 +1,6 @@
-package com.akami.core.helpers;
+package com.kratos.core.helpers;
 
-import com.akami.core.exception.ExceptionError;
+import com.kratos.core.exception.ExceptionError;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.networknt.schema.JsonSchema;

@@ -1,4 +1,4 @@
-package com.akami.core.exception;
+package com.kratos.core.exception;
 
 public class ExceptionError extends Error {
     private String errorMessage;

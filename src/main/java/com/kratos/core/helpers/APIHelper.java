@@ -1,4 +1,4 @@
-package com.akami.core.helpers;
+package com.kratos.core.helpers;
 
 import lombok.SneakyThrows;
 import org.apache.commons.io.FileUtils;
