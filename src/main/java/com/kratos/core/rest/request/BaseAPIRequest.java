@@ -134,15 +134,6 @@ public abstract class BaseAPIRequest {
                 .extract().response();
     }
 
-    protected Response deleteRequest(final String uri, String token) {
-        return given()
-                .when()
-                .header(Constants.X_AUTH, token)
-                .delete(uri)
-                .then()
-                .extract().response();
-    }
-
     protected Response getToken(final int statusCode, final Object rawBody) {
         return RestAssured.given()
                 .baseUri(ConfigurationHelper.getTokenURI())
@@ -166,15 +157,6 @@ public abstract class BaseAPIRequest {
         }
         return body;
     }
-
-
-    /*protected String setBaseUri() {
-        if (this.getClass().isAnnotationPresent(Host.class)) {
-            return this.getClass().getAnnotation(Host.class).baseURI();
-        } else {
-            throw new AnnotationConfigurationException("");
-        }
-    }*/
 
     protected RequestSpecification given() {
         requestSpecification = RestAssured.given().log().all(true);
