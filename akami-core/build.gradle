@@ -1,0 +1,49 @@
+plugins {
+    id 'java'
+    id 'java-library'
+
+}
+
+group 'com.pearson'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api 'org.springframework:spring-core:5.3.9'
+    api 'org.springframework:spring-context:5.3.9'
+    api 'org.springframework:spring-web:5.3.9'
+    api 'org.springframework:spring-beans:5.3.9'
+    api 'org.springframework:spring-test:5.3.9'
+    api 'org.springframework.boot:spring-boot:2.5.4'
+    api 'io.rest-assured:rest-assured:4.4.0'
+    api 'io.rest-assured:json-path:4.4.0'
+    api group: 'com.networknt', name: 'json-schema-validator', version: '1.0.66'
+
+    api 'org.apache.commons:commons-collections4:4.4'
+    api 'io.cucumber:cucumber-spring:6.11.0'
+    api 'org.slf4j:slf4j-api:2.0.0-alpha4'
+    api 'com.fasterxml.jackson.core:jackson-databind:2.12.4'
+    api 'com.fasterxml.jackson.core:jackson-core:2.12.4'
+    api 'com.fasterxml.jackson.core:jackson-annotations:2.12.4'
+    api group: 'io.rest-assured', name: 'xml-path', version: '4.4.0'
+    api group: 'org.codehaus.groovy', name: 'groovy', version: '3.0.8'
+
+    api 'io.cucumber:cucumber-java:6.11.0'
+    api 'io.cucumber:cucumber-junit:6.11.0'
+    api 'org.slf4j:slf4j-simple:2.0.0-alpha4'
+    api 'org.hamcrest:hamcrest-junit:2.0.0.0'
+    api 'org.projectlombok:lombok:1.18.20'
+
+    api "commons-configuration:commons-configuration:1.10"
+    api "org.apache.commons:commons-configuration2:2.5"
+    implementation group: 'commons-io', name: 'commons-io', version: '2.6'
+    implementation 'commons-beanutils:commons-beanutils:1.9.3'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+}
+
+test {
+    useJUnitPlatform()
+}
